@@ -27,9 +27,9 @@
             })
 
             // route for the health_history page
-            .when('/health_history', {
-                templateUrl : 'pages/health_history.html',
-                controller  : 'healthHistoryController'
+            .when('/transformation_challenge', {
+                templateUrl : 'pages/transformation_challenge.html',
+                controller  : 'transformationChallengeController'
             });
     });
 
