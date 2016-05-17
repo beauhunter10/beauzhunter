@@ -47,6 +47,21 @@
         $scope.message = 'Contact us! JK. This is just a demo.';
     });
 
-    scotchApp.controller('healthHistoryController', function($scope) {
-        $scope.message = 'Contact us! JK. This is just a demo.';
+    scotchApp.controller('transformationChallengeController', function($scope) {
+        var handler = StripeCheckout.configure({
+          key: 'pk_test_6TUSP9iuyl3APosYY3X7KWbU',
+          image: 'img/IMG_5545.jpeg',
+          locale: 'auto',
+          token: function(token) {
+            // Use the token to create the charge with a server-side script.
+            // You can access the token ID with `token.id`
+          }
+        });
+
+        handler.open({
+          name: 'HDFitDynasty',
+          description: 'Transformation Challenge',
+          amount: 6000
+        });
+
     });
