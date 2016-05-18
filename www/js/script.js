@@ -57,11 +57,12 @@
             // You can access the token ID with `token.id`
           }
         });
-
-        handler.open({
-          name: 'HDFitDynasty',
-          description: 'Transformation Challenge',
-          amount: 6000
-        });
+        $scope.myFunc = function() {
+            handler.open({
+              name: 'HDFitDynasty',
+              description: 'Transformation Challenge',
+              amount: 6000
+            });
+        };
 
     });
